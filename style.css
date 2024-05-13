@@ -1,7 +1,44 @@
-html {
-    max-width: 70ch;
-    padding: 3em 1em;
-    margin: auto;
-    line-height: 1.75;
-    font-size: 1.25em;
+/* Styles pour le corps de la page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* Styles pour la navbar */
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles pour la section d'accueil */
+.accueil-section {
+    background-color: white;
+    padding: 50px;
+}
+
+.accueil-section h2 {
+    color: black;
+}
+
+.accueil-section p {
+    color: black;
+}
+
