@@ -1,10 +1,11 @@
-/* Styles pour le corps de la page */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
 }
 
-/* Styles pour la navbar */
 .navbar {
     background-color: black;
     color: white;
@@ -28,17 +29,18 @@ body {
     font-weight: bold;
 }
 
-/* Styles pour la section d'accueil */
-.accueil-section {
-    background-color: white;
-    padding: 50px;
+section {
+    padding: 50px 0;
+    text-align: center;
 }
 
-.accueil-section h2 {
-    color: black;
+section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.accueil-section p {
-    color: black;
+section p {
+    font-size: 1.2em;
+    color: #333;
 }
 
