@@ -3,29 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS externe -->
+    <title>Votre Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
     <nav class="navbar">
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <div class="name">
+                <span class="first-name">Valentin</span>
+                <span class="last-name">Varcin</span>
+            </div>
+        </div>
     </nav>
-</header>
+    <div class="content">
+        <div class="photo">
+            <img src="images/valentin_.png" alt="photo">
+        </div>
+        <div class="presentation">
+            <p>
+            Bonjour, je m'appelle Valentin Varcin, je suis passionné d'informatique et particulièrement en cybersécurité. Je suis actuellement en 3ème année de BUT Informatique à l'IUT2 de grenoble.
+            </p>
+        </div>
+    </div>
+    <section id="services">
+        <div class="realisation"><p> J'aime déployer des  services afin de découvrir leurs particularités et leur fonctionnement </p> </div>
+        <div class="wrapper">
+          <div class="grid1">
+            <div class="info">
+              <p>Serveur VPN pour une connexion plus sécurisée.</p>
+              <a href="https://www.wireguard.com/">En savoir plus</a>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="info">
+              <p>Gestionnaire de mot de passe.</p>
+              <a href="https://bitwarden.com/">En savoir plus</a>
+            </div>
+          </div>
+          <div class="grid3">
+            <div class="info">
+              <p>Serveur Proxy Squid</p>
+              <a href="https://www.squid-cache.org/">En savoir plus.</a>
+            </div>
+          </div>
+          <div class="grid4">
+            <div class="info">
+              <p>Bloqueur de publicité et de trackeur sur internet.</p>
+              <a href="https://pi-hole.net/">En savoir plus</a>
+            </div>
+          </div>
+        </div>4
+      </section>
 
-<section id="accueil">
-    <h1>Accueil</h1>
-    <p>Bienvenue sur mon portfolio !</p>
-</section>
+    <section id="projets">
+    <h2 class="section-title">Mes Projets</h2>
+    <div class="project">
+        <h3>Conception et mise en œuvre d’une infrastructure réseau sécurisée</h3>
+        <p>Dans ce projet encadré par notre BUT, notre équipe de trois personnes était chargée de concevoir et dimensionner une infrastructure réseau robuste, entièrement nouvelle, destinée à être déployée dans un environnement similaire à celui d'une entreprise. Les contraintes étaient multiples, notamment l'utilisation exclusive de logiciels open source et la création d'un réseau comprenant des éléments tels qu'un routeur/firewall, un serveur DNS, un serveur DHCP, ainsi que des services Kerberos/LDAP, entre autres. Nous avons dû produire des livrables comprenant des scripts permettant de déployer les machines virtuelles cruciales telles que le routeur et le serveur DNS. Ce processus garantissait la reproductibilité et la facilité de déploiement de l'infrastructure.</p>
+        <div class="project-info">
+          <a href="https://github.com/votre-nom-d-utilisateur/votre-repo1" class="github-link"><img src="images/github.png" alt="Lien GitHub" width="32" height="32"></a>
+            <p class="skills">Compétences : conception d'infrastructure réseau, sécurité réseau, Documentation sur les logiciels Open Source utilisés, création et configuration de machines virtuelles, scripts de déploiement, gestion d'une équipe.</p>
+        </div>
+    </div>
+    
+    <div class="project">
+        <h3>Packaging d'une application</h3>
+        <p>Dans le cadre de ce projet, ma responsabilité consistait à déployer l'application open source "Leed RSS", un agrégateur de flux RSS. L'objectif principal était d'automatiser ce déploiement en utilisant Docker, afin de rendre l'application rapidement disponible via l'utilisation de Docker-compose. Parallèlement, il était essentiel de gérer les dépendances de l'application, notamment :</p>
+        <ul>
+            <li>Configuration d'un serveur Apache (recommandé)</li>
+            <li>Installation de PHP avec une version minimale de 7.2</li>
+            <li>Mise en place d'une base de données MySQL</li>
+        </ul>
+        <div class="project-info">
+          <a href="https://github.com/votre-nom-d-utilisateur/votre-repo1" class="github-link"><img src="images/github.png" alt="Lien GitHub" width="32" height="32"></a>
+            <p class="skills">Compétences : Docker, Docker-compose, Dockerfile, Apache, PHP, MySQL</p>
+        </div>
+    </div>
 
-<!-- Ajoutez d'autres sections (Projets, CV, Contact) selon vos besoins -->
+    <div class="project">
+        <h3>Déploiement LAPS sur les serveurs Entreprise</h3>
+        <p>
+            Dans le cadre de mon projet relatif à LAPS (Local Administrator Password Solution) au cours de mon alternance à LYNRED, j'ai travaillé sur l'implémentation de cette solution Microsoft. L'objectif était de renforcer la sécurité des mots de passe des administrateurs locaux en les stockant de manière sécurisée dans Active Directory.
+            Le processus a impliqué une analyse méticuleuse des implications de LAPS,
+            notamment en ce qui concerne la compatibilité avec les serveurs Windows et l'impact potentiel sur les services et tâches planifiées exécutés par ces serveurs. Cette analyse a été menée à l'aide de scripts PowerShell, 
+            permettant ainsi une visibilité approfondie des risques potentielles.
+        </p>
+        <div class="project-info">
+            <p class="skills">Compétences : Active Directory, PowerShell, gestion des serveurs Windows</p>
+        </div>
+    </div>
+    </section>
 
-</body>
-</html>
-
+    <section id="contact">
+      <h2 class="section-title">Me Contacter</h2>
+      <div class="contact-info">
+          <ul>
+              <li>Email : <a href="mailto:valentin.varcin@example.com">valentinvarcin@hotmail.com</a></li>
+              <li>Téléphone : <a href="tel:+330123456789">+33 07 61 73 05 89</a></li>
+              <li>LinkedIn : <a href="https://www.linkedin.com/in/valentin-varcin" target="_blank">Valentin Varcin</a></li>
+          </ul>
+      </div>
+    </section>
+      
+      
+      
