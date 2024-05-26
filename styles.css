@@ -1,46 +1,312 @@
-html {
-    max-width: 70ch;
-    padding: 3em 1em;
-    margin: auto;
-    line-height: 1.75;
-    font-size: 1.25em;
+body {
+  height: auto;
+  background: linear-gradient(to bottom right, #848588, #3d3d41);
+  /*background: linear-gradient(to bottom right, #5e5f6d, #2c2c38);*/
 }
 
-.navbar {
-    background-color: black;
-    color: white;
-    padding: 20px;
+nav {
+  display: flex;
+  top:0;
+  width: 100%;  
+  flex-direction: row-reverse;
+  align-items: center; /* centrer verticalement le contenu de la navbar */
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav-list li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 30px;
 }
 
-.navbar ul li {
-    display: inline;
-    margin-right: 20px;
+.nav-list a {
+  color: white;  
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.nav-list li:hover a {
+  color: #007bff;
+}
+
+.header {
+  left: 8%;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.header span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.photo {
+   display: flex;
+   justify-content: center;
+}
+
+.photo img {
+   border-radius: 7%;
+   width: 350px;
+   margin-top: 5%;
+}
+
+.presentation {
+   color: white;
+   text-align: justify;
+}
+
+.presentation p {  
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 20px;
 }
 
 section {
-    padding: 50px 0;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8%;  /* ajuster l'emplacement de Mes Services et de la grid*/
 }
 
-section h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.realisation p {
+  width: 50%;
+  font-size: 25px;
+  margin: 0 auto;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-section p {
-    font-size: 1.2em;
-    color: #333;
+.wrapper {
+  display: grid;
+  position: relative;
+  margin-top: 8%;  /* ajustement entre texte et grid */
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 70vh;
+  height: 70vh; 
+  margin-bottom: 2%;
 }
 
+.grid1, .grid2, .grid3, .grid4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: black;
+  border-radius: 1%;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid1:hover,
+.grid2:hover,
+.grid3:hover,
+.grid4:hover {
+  height: 100%;
+}
+
+.info {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(100%);
+}
+
+.grid1:hover .info,
+.grid2:hover .info,
+.grid3:hover .info,
+.grid4:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.info a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.info a:hover {
+  background-color: #0069d9;
+}
+
+.grid1 {
+  background-image: url('images/wireguard.jpeg');
+  background-size: contain; /* ou cover selon la taille de l'image et l'effet souhaité */
+  background-repeat:no-repeat;
+} 
+
+.grid2 {
+  background-image: url('images/bitwarden.jpeg');
+  background-size: cover; /* ou cover selon la taille de l'image et l'effet souhaité */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid3 {
+  background-image: url('images/squid.jpeg');
+  background-size: cover; /* ou cover selon la taille de l'image et l'effet souhaité */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid4 {
+  background-image: url('images/pi-hole.jpeg');
+  background-size: cover; /* ou cover selon la taille de l'image et l'effet souhaité */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#services {
+  background-color: white;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%)/2);
+}
+
+
+#projets {
+  margin-top: 50px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.project {
+  display: inline-block;
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.project p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .project {
+      width: 100%;
+  }
+}
+
+/* changer la couleur du logo github en blanc */
+.github-link img {
+  filter: invert(1);
+}
+
+/* section contact */
+
+/* CSS pour la section Contact */
+#contact {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact .section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.contact-info a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+
+.contact-info a:visited {
+  color: #551a8b;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+      padding: 15px;
+  }
+
+  .contact-info p, .contact-info li {
+      font-size: 1em;
+  }
+
+  .contact-info .section-title {
+      font-size: 1.5em;
+  }
+}
