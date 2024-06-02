@@ -63,7 +63,7 @@ nav {
 .presentation p {  
   width: 25%;
   margin: 0 auto;
-  margin-top: 1%;
+  margin-top: 2%;
   font-size: 20px;
 }
 
@@ -73,14 +73,14 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 8%;  /* ajuster l'emplacement de Mes Services et de la grid*/
+  margin-top: 3%;  /* ajuster l'emplacement de Mes Services et de la grid*/
 }
 
 .realisation p {
-  width: 50%;
+  width: 60%;
   font-size: 25px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 100px;
   align-items: center;
   justify-content: center;
   text-align: center;
